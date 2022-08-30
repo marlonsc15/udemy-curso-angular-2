@@ -1,0 +1,21 @@
+<h1>meu nome e {{nome}}, eu tenho {{idade}} anos</h1>
+
+<p>{{idade + 1}}</p>
+
+<p>{{idade > 25}}</p>
+
+<button [disabled]="checkedDisabled">Button</button>
+
+<hr>
+
+<img [src]="imgSrc" [title]="imgTitle" [alt]="imgTitle">
+
+<hr>
+
+<h2>Event Binding</h2>
+
+<button (click)="alertaInfo($event)">Evento</button>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background: red; width: 300px; height: 300px;"></div>
+
+{{ position.x }} ~ {{ position.y}}
