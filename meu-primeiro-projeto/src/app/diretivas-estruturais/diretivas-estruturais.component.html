@@ -1,0 +1,25 @@
+<p *ngIf="condition; else elseBlock">pato</p>
+
+<ng-template #elseBlock>
+    <p>ganso</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">
+    True
+</p>
+
+<p *ngIf="!conditionClick">
+    False
+</p>
+
+<button (click)="onClick()">Clicar</button>
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of list">
+        {{item.nome}} - idade = {{item.idade}}
+    </li>
+</ul>
