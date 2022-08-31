@@ -13,7 +13,9 @@ export class DiretivasEstruturaisComponent implements OnInit {
     {nome: "Marlon SC", idade: 22},
     {nome: "Emerson SC", idade: 17},
     {nome: "Felipe SC", idade: 10}
-  ]
+  ];
+
+  public nome: string = 'marlon';
 
   constructor() { }
 
@@ -33,5 +35,14 @@ export class DiretivasEstruturaisComponent implements OnInit {
     } else {
       this.conditionClick = true;
     }
+  }
+
+  public onClickAddList() {
+    this.list.push({nome: "Adriana", idade: 47});
+  }
+
+  public onclickEventList(event: number){
+    this.list.splice(event, 1)
+    
   }
 }
