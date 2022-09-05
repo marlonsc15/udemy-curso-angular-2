@@ -4,14 +4,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <ng-template [ngIf]="getDados">
+    <app-food-list></app-food-list>
+
+
+
+  <!--<ng-template [ngIf]="getDados">
       <h1>{{getDados.nome}}</h1>
       <h2>{{getDados.idade}}</h2>
     </ng-template>
     <app-output (enviarDados)="setDados($event)"></app-output>
-
-
-    <!--<app-input [contador]="addValue"></app-input>
+    <app-input [contador]="addValue"></app-input>
     <br>
     <button (click)="add()">Add</button>
     <app-new-component></app-new-component>
