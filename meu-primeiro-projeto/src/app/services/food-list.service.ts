@@ -1,7 +1,7 @@
 import { FoodList } from './../module/food-list';
 import { Injectable, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,12 @@ export class FoodListService {
     "feijão",
     "Ovo"
   ];
+
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  };
 
   private url: string = "http://localhost:3000/"; //list-food
   constructor( private http: HttpClient) { }

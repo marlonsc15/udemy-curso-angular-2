@@ -4,13 +4,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-food-add></app-food-add>
+    <app-forms></app-forms>
+
+    <!--<app-food-add></app-food-add>
     <app-food-list></app-food-list>
-    
-
-
-
-  <!--<ng-template [ngIf]="getDados">
+    <ng-template [ngIf]="getDados">
       <h1>{{getDados.nome}}</h1>
       <h2>{{getDados.idade}}</h2>
     </ng-template>
