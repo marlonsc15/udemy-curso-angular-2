@@ -1,6 +1,7 @@
 import { FoodList } from './../../module/food-list';
 import { FoodListService } from './../../services/food-list.service';
 import { Component, OnInit } from '@angular/core';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-food-list',
@@ -27,8 +28,15 @@ export class FoodListComponent implements OnInit {
 
   public foodListDelete(id: number) {
     return this.foodListService.foodListDelete(id).subscribe(
-      res => console.log(res),
+      res => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
       error => error
     )
   }
+  
 }
